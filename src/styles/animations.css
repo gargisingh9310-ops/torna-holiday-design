@@ -1,0 +1,38 @@
+/* Custom animation helpers for cinematic storytelling */
+
+@keyframes pulseGently {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(6px);
+  }
+}
+
+.animate-scroll-indicator {
+  animation: pulseGently 2.2s ease-in-out infinite;
+}
+
+/* Subtle gold shimmer */
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(184, 139, 85, 0) 0%,
+    rgba(184, 139, 85, 0.4) 50%,
+    rgba(184, 139, 85, 0) 100%
+  );
+  background-size: 200% 100%;
+}
+
+/* Text reveal clip path */
+.reveal-mask {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-mask-hidden {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+

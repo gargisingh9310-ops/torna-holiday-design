@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-ivory: #F4F0E8;
+    --color-forest: #243B35;
+    --color-gold: #B88B55;
+    --color-sand: #E5DED1;
+    --color-charcoal: #262824;
+    --color-white: #FFFFFF;
+  }
+
+  html {
+    background-color: #F4F0E8;
+    color: #262824;
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #243B35;
+    color: #F4F0E8;
+  }
+}
+
+/* Elegant Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F0E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #B88B55;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #243B35;
+}
+
+/* Subtle image zoom transition */
+.img-editorial-zoom {
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.group:hover .img-editorial-zoom {
+  transform: scale(1.06);
+}
+
+/* Glassmorphism Navigation */
+.nav-scrolled {
+  background: rgba(244, 240, 232, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(184, 139, 85, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(36, 59, 53, 0.08);
+}
+
+.nav-transparent {
+  background: linear-gradient(180deg, rgba(21, 36, 32, 0.75) 0%, rgba(21, 36, 32, 0) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

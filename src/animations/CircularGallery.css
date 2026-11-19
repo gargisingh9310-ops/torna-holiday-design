@@ -1,0 +1,125 @@
+.circular-gallery-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  user-select: none;
+  cursor: grab;
+  touch-action: pan-y pinch-zoom;
+  background: transparent;
+}
+
+.circular-gallery-wrapper:active {
+  cursor: grabbing;
+}
+
+/* 3D Scene Viewport */
+.circular-gallery-viewport {
+  width: 100%;
+  height: 100%;
+  perspective: 1400px;
+  perspective-origin: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circular-gallery-cylinder {
+  width: 320px;
+  height: 440px;
+  position: absolute;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.circular-gallery-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -10px rgba(21, 36, 32, 0.35);
+  backface-visibility: hidden;
+  transition: box-shadow 0.4s ease, filter 0.4s ease;
+  background-color: #243B35;
+}
+
+.circular-gallery-card:hover {
+  box-shadow: 0 30px 60px -12px rgba(184, 139, 85, 0.45);
+}
+
+.circular-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  transition: transform 0.6s ease;
+}
+
+.circular-gallery-card:hover .circular-gallery-img {
+  transform: scale(1.08);
+}
+
+.circular-gallery-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(21, 36, 32, 0.05) 0%,
+    rgba(21, 36, 32, 0.25) 50%,
+    rgba(21, 36, 32, 0.92) 100%
+  );
+  pointer-events: none;
+}
+
+.circular-gallery-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.75rem 1.5rem;
+  color: #FFFFFF;
+  pointer-events: none;
+}
+
+.circular-gallery-hint {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #243B35;
+  background: rgba(244, 240, 232, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  pointer-events: none;
+  border: 1px solid rgba(184, 139, 85, 0.25);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .circular-gallery-wrapper {
+    height: 480px;
+  }
+  .circular-gallery-cylinder {
+    width: 250px;
+    height: 350px;
+  }
+  .circular-gallery-card {
+    width: 240px;
+    height: 340px;
+    border-radius: 16px;
+  }
+  .circular-gallery-viewport {
+    perspective: 1000px;
+  }
+}

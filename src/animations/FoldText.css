@@ -1,0 +1,35 @@
+.foldtext-container {
+  display: inline-block;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.foldtext-word {
+  display: inline-block;
+  white-space: pre-wrap;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  margin-right: 0.25em;
+}
+
+.foldtext-element {
+  display: inline-block;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.foldtext-element.fold-paper {
+  position: relative;
+}
+
+.foldtext-element.fold-paper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(36, 59, 53, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
