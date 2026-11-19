@@ -20,17 +20,17 @@ export default function Footer({ onOpenPlanTrip }) {
   ];
 
   return (
-    <footer id="footer" className="bg-forest-dark text-ivory pt-20 pb-12 border-t border-forest-light/40">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-16">
+    <footer id="footer" className="bg-forest-dark text-ivory pt-14 pb-10 sm:pt-20 sm:pb-12 border-t border-forest-light/40">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 md:gap-12 lg:gap-16 mb-12 sm:mb-16">
           {/* Column 1: Brand & Introduction */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="space-y-3">
+          <div className="lg:col-span-5 space-y-4 sm:space-y-6">
+            <div className="space-y-2.5 sm:space-y-3">
               <a href="#home" className="inline-block group focus:outline-none" aria-label="Torna Holidays Home">
                 <img
                   src="/logo.png"
                   alt="Torna Holidays"
-                  className="h-14 md:h-16 w-auto object-contain filter drop-shadow transition-transform duration-300 group-hover:scale-105"
+                  className="h-12 sm:h-14 md:h-16 w-auto object-contain filter drop-shadow transition-transform duration-300 group-hover:scale-105"
                 />
               </a>
               <p className="text-xs uppercase tracking-[0.25em] text-gold font-medium font-sans">
@@ -38,11 +38,11 @@ export default function Footer({ onOpenPlanTrip }) {
               </p>
             </div>
 
-            <p className="text-sm text-ivory/75 font-light leading-relaxed max-w-md font-sans">
+            <p className="text-xs sm:text-sm text-ivory/75 font-light leading-relaxed max-w-md font-sans">
               Torna Holidays specializes in bespoke, private luxury travel across India. Crafting unforgettable memories for NRI travelers, international cultural seekers, and discerning global guests with authentic royal hospitality.
             </p>
 
-            <div className="flex items-center gap-4 pt-2">
+            <div className="flex items-center gap-4 pt-1 sm:pt-2">
               <a
                 href={COMPANY_CONTACT.socials.whatsapp}
                 target="_blank"
@@ -56,11 +56,11 @@ export default function Footer({ onOpenPlanTrip }) {
           </div>
 
           {/* Column 2: Navigation Links */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-3 sm:space-y-4">
             <h4 className="text-xs uppercase tracking-[0.2em] text-gold font-semibold">
               Explore
             </h4>
-            <ul className="space-y-3 text-sm font-light">
+            <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm font-light">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <a
@@ -75,11 +75,11 @@ export default function Footer({ onOpenPlanTrip }) {
           </div>
 
           {/* Column 3: Featured Circuits */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-3 sm:space-y-4">
             <h4 className="text-xs uppercase tracking-[0.2em] text-gold font-semibold">
               Curated Circuits
             </h4>
-            <ul className="space-y-3 text-sm font-light">
+            <ul className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm font-light">
               {packagesList.map((pkg) => (
                 <li key={pkg.label}>
                   <a
@@ -97,13 +97,13 @@ export default function Footer({ onOpenPlanTrip }) {
           </div>
 
           {/* Column 4: Contact Information */}
-          <div className="lg:col-span-3 space-y-4">
+          <div className="lg:col-span-3 space-y-3 sm:space-y-4">
             <h4 className="text-xs uppercase tracking-[0.2em] text-gold font-semibold">
               Contact Concierge
             </h4>
-            <div className="space-y-3 text-sm font-light text-ivory/80">
+            <div className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm font-light text-ivory/80">
               <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-gold flex-shrink-0 mt-1" />
+                <MapPin className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
                 <span className="text-xs leading-relaxed text-ivory/75">
                   {COMPANY_CONTACT.address}
                 </span>
@@ -140,11 +140,11 @@ export default function Footer({ onOpenPlanTrip }) {
         </div>
 
         {/* Bottom Bar: Copyright & Accreditation */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-ivory/60 gap-4">
+        <div className="pt-6 sm:pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-ivory/60 gap-3 sm:gap-4 text-center sm:text-left">
           <p>
             © {new Date().getFullYear()} Torna Holidays. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-6">
             <a
               href="https://tornaholidays.com"
               target="_blank"
@@ -153,7 +153,7 @@ export default function Footer({ onOpenPlanTrip }) {
             >
               Official Website: tornaholidays.com
             </a>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span className="text-ivory/40">Incredible India Recognized</span>
           </div>
         </div>

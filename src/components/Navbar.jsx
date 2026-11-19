@@ -19,6 +19,17 @@ export default function Navbar({ onOpenPlanTrip }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     { label: 'Home', href: '#home' },
     { label: 'Travel Packages', href: '#packages' },
@@ -44,7 +55,7 @@ export default function Navbar({ onOpenPlanTrip }) {
           isScrolled ? 'nav-scrolled py-3.5' : 'nav-transparent py-5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <a
             href="#home"
@@ -110,35 +121,36 @@ export default function Navbar({ onOpenPlanTrip }) {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-forest-dark/95 backdrop-blur-xl flex flex-col justify-between p-8 text-ivory lg:hidden animate-fadeIn">
-          <div className="flex items-center justify-between pt-2">
-            <img src="/logo.png" alt="Torna Holidays" className="h-12 w-auto object-contain filter drop-shadow" />
+        <div className="fixed inset-0 z-40 bg-forest-dark/95 backdrop-blur-xl flex flex-col justify-between p-6 sm:p-8 text-ivory lg:hidden animate-fadeIn overflow-y-auto">
+          <div className="flex items-center justify-between pt-1 sm:pt-2">
+            <img src="/logo.png" alt="Torna Holidays" className="h-10 sm:h-12 w-auto object-contain filter drop-shadow" />
             <button
               onClick={() => setMobileMenuOpen(false)}
+              aria-label="Close navigation menu"
               className="text-ivory/80 hover:text-white p-2"
             >
-              <X className="w-7 h-7" />
+              <X className="w-6 h-6 sm:w-7 sm:h-7" />
             </button>
           </div>
 
-          <div className="flex flex-col gap-6 my-auto text-center">
+          <div className="flex flex-col gap-4 sm:gap-6 my-auto text-center py-6">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
-                className="text-2xl font-serif text-ivory/90 hover:text-gold transition-colors py-1"
+                className="text-xl sm:text-2xl font-serif text-ivory/90 hover:text-gold transition-colors py-1"
               >
                 {link.label}
               </a>
             ))}
-            <div className="pt-4">
+            <div className="pt-2 sm:pt-4">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   onOpenPlanTrip();
                 }}
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gold text-white font-medium text-sm tracking-widest uppercase hover:bg-gold-light transition-all shadow-lg w-full max-w-xs mx-auto"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 bg-gold text-white font-medium text-xs sm:text-sm tracking-widest uppercase hover:bg-gold-light transition-all shadow-lg w-full max-w-xs mx-auto"
               >
                 <span>Plan Your Trip</span>
                 <ArrowUpRight className="w-4 h-4" />
@@ -146,7 +158,7 @@ export default function Navbar({ onOpenPlanTrip }) {
             </div>
           </div>
 
-          <div className="border-t border-ivory/15 pt-6 text-center text-xs text-ivory/70 space-y-2">
+          <div className="border-t border-ivory/15 pt-4 sm:pt-6 text-center text-xs text-ivory/70 space-y-1.5 sm:space-y-2">
             <p className="flex items-center justify-center gap-2">
               <Phone className="w-3.5 h-3.5 text-gold" />
               <span>{COMPANY_CONTACT.phone}</span>

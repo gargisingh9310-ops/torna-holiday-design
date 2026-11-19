@@ -84,7 +84,7 @@ export default function Hero({ onOpenPlanTrip }) {
     <section
       id="home"
       ref={heroRef}
-      className="relative w-full h-screen min-h-[680px] flex items-center justify-center overflow-hidden bg-forest-dark"
+      className="relative w-full h-screen min-h-[580px] sm:min-h-[680px] flex items-center justify-center overflow-hidden bg-forest-dark"
     >
       {/* Background Cinematic Video with Fallback Poster */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -110,16 +110,16 @@ export default function Hero({ onOpenPlanTrip }) {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-20 max-w-5xl mx-auto px-6 sm:px-8 text-center text-ivory pt-16 sm:pt-20">
+      <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-8 text-center text-ivory pt-14 sm:pt-20">
         {/* Curated Pre-title */}
-        <div className="mb-4 sm:mb-6">
-          <span className="text-[11px] sm:text-xs font-sans tracking-[0.28em] uppercase text-gold font-semibold">
+        <div className="mb-3 sm:mb-6">
+          <span className="text-[10px] sm:text-xs font-sans tracking-[0.22em] sm:tracking-[0.28em] uppercase text-gold font-semibold">
             Bespoke Luxury Expeditions • Torna Holidays
           </span>
         </div>
 
         {/* Main Editorial Heading */}
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-normal tracking-tight leading-[1.08] mb-6 sm:mb-8 text-white">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-normal tracking-tight leading-[1.1] sm:leading-[1.08] mb-4 sm:mb-8 text-white">
           <span ref={line1Ref} className="block">
             Discover India.
           </span>
@@ -131,7 +131,7 @@ export default function Hero({ onOpenPlanTrip }) {
         {/* Supporting Text */}
         <p
           ref={textRef}
-          className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-ivory/85 font-light leading-relaxed mb-10 sm:mb-12 font-sans"
+          className="max-w-2xl mx-auto text-sm sm:text-base md:text-xl text-ivory/85 font-light leading-relaxed mb-8 sm:mb-12 font-sans px-2 sm:px-0"
         >
           Journey through timeless heritage, extraordinary landscapes and unforgettable experiences, thoughtfully curated for you.
         </p>
@@ -139,11 +139,11 @@ export default function Hero({ onOpenPlanTrip }) {
         {/* CTA Buttons */}
         <div
           ref={ctaRef}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 w-full max-w-sm sm:max-w-none mx-auto"
         >
           <button
             onClick={scrollToPackages}
-            className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-gold text-white font-sans text-xs uppercase tracking-widest font-semibold hover:bg-gold-dark transition-all duration-300 shadow-xl"
+            className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-gold text-white font-sans text-xs uppercase tracking-widest font-semibold hover:bg-gold-dark transition-all duration-300 shadow-xl"
           >
             <span>Explore Journeys</span>
             <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -151,7 +151,7 @@ export default function Hero({ onOpenPlanTrip }) {
 
           <button
             onClick={onOpenPlanTrip}
-            className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent text-white border border-white/60 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-white hover:text-forest transition-all duration-300"
+            className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-transparent text-white border border-white/60 font-sans text-xs uppercase tracking-widest font-semibold hover:bg-white hover:text-forest transition-all duration-300"
           >
             <span>Plan Your Trip</span>
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold transition-transform group-hover:scale-150" />
@@ -164,13 +164,13 @@ export default function Hero({ onOpenPlanTrip }) {
         ref={scrollIndicatorRef}
         onClick={scrollToNext}
         aria-label="Scroll to discover"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-ivory/70 hover:text-gold transition-colors focus:outline-none"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1.5 sm:gap-2 text-ivory/70 hover:text-gold transition-colors focus:outline-none"
       >
-        <span className="text-[10px] uppercase tracking-[0.25em] font-sans">
+        <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.25em] font-sans">
           Scroll to Discover
         </span>
-        <div className="w-7 h-11 rounded-full border border-ivory/30 flex items-start justify-center p-1.5">
-          <div className="w-1.5 h-2.5 rounded-full bg-gold animate-scroll-indicator" />
+        <div className="w-6 sm:w-7 h-9 sm:h-11 rounded-full border border-ivory/30 flex items-start justify-center p-1 sm:p-1.5">
+          <div className="w-1.5 h-2 sm:h-2.5 rounded-full bg-gold animate-scroll-indicator" />
         </div>
       </button>
     </section>

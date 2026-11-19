@@ -17,13 +17,13 @@ export default function PackageDetailModal({ pkg, onClose, onOpenPlanTrip }) {
   if (!pkg) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-8 bg-forest-dark/80 backdrop-blur-md animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-8 bg-forest-dark/80 backdrop-blur-md animate-fadeIn">
       <div
-        className="relative w-full max-w-4xl max-h-[90vh] bg-ivory rounded-2xl overflow-hidden shadow-2xl flex flex-col border border-sand"
+        className="relative w-full max-w-4xl max-h-[92vh] sm:max-h-[90vh] bg-ivory rounded-2xl overflow-hidden shadow-2xl flex flex-col border border-sand"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Media Banner */}
-        <div className="relative h-64 sm:h-80 w-full overflow-hidden flex-shrink-0">
+        <div className="relative h-48 sm:h-64 md:h-80 w-full overflow-hidden flex-shrink-0">
           <img
             src={pkg.image}
             alt={pkg.title}
@@ -41,34 +41,34 @@ export default function PackageDetailModal({ pkg, onClose, onOpenPlanTrip }) {
           <button
             onClick={onClose}
             aria-label="Close modal"
-            className="absolute top-5 right-5 w-10 h-10 rounded-full bg-forest-dark/80 hover:bg-forest text-ivory flex items-center justify-center transition-all border border-white/20"
+            className="absolute top-3 right-3 sm:top-5 sm:right-5 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-forest-dark/80 hover:bg-forest text-ivory flex items-center justify-center transition-all border border-white/20"
           >
             <X className="w-5 h-5" />
           </button>
 
           {/* Overlay Details */}
-          <div className="absolute bottom-6 left-6 right-6 text-ivory">
-            <div className="flex flex-wrap items-center gap-3 text-xs font-medium mb-2">
-              <span className="px-3 py-1 bg-gold text-white uppercase tracking-wider font-semibold rounded-none">
+          <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 text-ivory">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-[11px] sm:text-xs font-medium mb-1.5 sm:mb-2">
+              <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 bg-gold text-white uppercase tracking-wider font-semibold rounded-none">
                 {pkg.tag || 'Curated Expedition'}
               </span>
-              <span className="flex items-center gap-1.5 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white">
+              <span className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-0.5 sm:py-1 bg-white/20 backdrop-blur-md rounded-full text-white">
                 <Clock className="w-3.5 h-3.5 text-gold" />
                 {pkg.duration}
               </span>
-              <span className="flex items-center gap-1.5 px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white">
+              <span className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-0.5 sm:py-1 bg-white/20 backdrop-blur-md rounded-full text-white">
                 <MapPin className="w-3.5 h-3.5 text-gold" />
                 {pkg.location}
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-serif font-medium text-white">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-medium text-white leading-tight">
               {pkg.title}
             </h2>
           </div>
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="p-6 sm:p-8 overflow-y-auto space-y-6 text-charcoal">
+        <div className="p-4 sm:p-6 md:p-8 overflow-y-auto space-y-4 sm:space-y-6 text-charcoal">
           <div>
             <h3 className="text-xs uppercase tracking-widest text-gold font-semibold mb-2">
               Journey Overview

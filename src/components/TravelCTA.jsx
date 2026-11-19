@@ -67,7 +67,7 @@ export default function TravelCTA({ onOpenPlanTrip }) {
   return (
     <section
       ref={ctaRef}
-      className="relative w-full min-h-[620px] sm:min-h-[720px] flex items-center justify-center overflow-hidden bg-forest-dark"
+      className="relative w-full min-h-[460px] sm:min-h-[580px] lg:min-h-[720px] flex items-center justify-center overflow-hidden bg-forest-dark"
     >
       {/* Background Cinematic Short Travel Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -94,25 +94,25 @@ export default function TravelCTA({ onOpenPlanTrip }) {
       {/* Content */}
       <div
         ref={contentRef}
-        className="relative z-10 max-w-4xl mx-auto px-6 sm:px-8 text-center text-ivory py-20"
+        className="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 text-center text-ivory py-14 sm:py-20"
       >
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-gold text-xs uppercase tracking-[0.25em] font-semibold mb-6 border border-white/15">
+        <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-white/10 backdrop-blur-md text-gold text-[10px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] font-semibold mb-4 sm:mb-6 border border-white/15">
           <Compass className="w-3.5 h-3.5" />
           <span>Curated Private Travel</span>
         </div>
 
-        <h2 className="text-3xl sm:text-5xl md:text-6xl font-serif font-normal text-white leading-tight mb-6 tracking-tight">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-white leading-tight mb-4 sm:mb-6 tracking-tight">
           Your India Story Starts Here.
         </h2>
 
-        <p className="text-base sm:text-xl text-ivory/85 font-light max-w-2xl mx-auto leading-relaxed mb-10 font-sans">
+        <p className="text-sm sm:text-lg md:text-xl text-ivory/85 font-light max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10 font-sans px-2 sm:px-0">
           From royal escapes to hidden gems, let us create a journey you'll remember forever.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-xs sm:max-w-none mx-auto">
           <button
             onClick={onOpenPlanTrip}
-            className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-gold text-white font-sans text-xs uppercase tracking-widest font-semibold hover:bg-gold-light transition-all duration-300 shadow-2xl"
+            className="w-full sm:w-auto group inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 bg-gold text-white font-sans text-xs uppercase tracking-widest font-semibold hover:bg-gold-light transition-all duration-300 shadow-2xl"
           >
             <span>Plan Your Journey</span>
             <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />

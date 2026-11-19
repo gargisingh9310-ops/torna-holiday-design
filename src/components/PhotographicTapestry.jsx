@@ -55,23 +55,23 @@ export const TAPESTRY_PERSPECTIVES = [
 
 export default function PhotographicTapestry() {
   return (
-    <section id="tapestry" className="py-20 sm:py-28 bg-ivory overflow-hidden border-t border-sand/40 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 text-center">
+    <section id="tapestry" className="py-16 sm:py-20 lg:py-28 bg-ivory overflow-hidden border-t border-sand/40 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto mb-8 sm:mb-12">
-          <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-3">
+        <div className="max-w-3xl mx-auto mb-6 sm:mb-10 lg:mb-12">
+          <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold mb-2 sm:mb-3">
             Photographic Tapestry
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-forest font-normal tracking-tight leading-tight mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-forest font-normal tracking-tight leading-tight mb-3 sm:mb-4">
             India, Through Every Perspective.
           </h2>
-          <p className="text-base sm:text-lg text-charcoal/80 font-light font-sans max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg text-charcoal/80 font-light font-sans max-w-2xl mx-auto leading-relaxed">
             Eight perspectives. Countless stories. One extraordinary country waiting to be explored.
           </p>
         </div>
 
         {/* CircularGallery Component */}
-        <div style={{ height: '600px', position: 'relative' }}>
+        <div className="h-[440px] sm:h-[520px] lg:h-[600px] relative w-full">
           <CircularGallery
             bend={3}
             textColor="#ffffff"

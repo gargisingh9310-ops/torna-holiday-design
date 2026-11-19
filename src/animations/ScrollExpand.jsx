@@ -104,7 +104,7 @@ export default function ScrollExpand({
           <p className="text-xs md:text-sm uppercase tracking-widest text-gold font-semibold mb-2">
             The Living Canvas of India
           </p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-forest leading-tight font-medium whitespace-pre-line">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-forest leading-tight font-medium whitespace-pre-line">
             {heading}
           </h2>
         </div>
@@ -136,13 +136,13 @@ export default function ScrollExpand({
 
           {/* Full-screen Revealed Content */}
           <div ref={contentRef} className="scroll-expand-content">
-            <span className="inline-block text-xs uppercase tracking-widest px-3 py-1 bg-white/20 backdrop-blur-md text-ivory rounded-full mb-3 border border-white/25">
+            <span className="inline-block text-[11px] sm:text-xs uppercase tracking-widest px-3 py-1 bg-white/20 backdrop-blur-md text-ivory rounded-full mb-2 sm:mb-3 border border-white/25">
               {locationBadge}
             </span>
-            <h3 className="text-2xl sm:text-3xl md:text-5xl font-serif text-ivory font-medium max-w-3xl leading-snug mb-4">
+            <h3 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-ivory font-medium max-w-3xl leading-snug mb-2 sm:mb-4">
               "India does not reveal herself all at once. She unfolds in silent moments."
             </h3>
-            <p className="text-sm md:text-lg text-ivory/85 max-w-2xl font-light leading-relaxed">
+            <p className="text-xs sm:text-base md:text-lg text-ivory/85 max-w-2xl font-light leading-relaxed">
               {subheading}
             </p>
           </div>

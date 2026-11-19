@@ -60,25 +60,25 @@ export default function TripPlannerModal({ isOpen, onClose, initialPackage = nul
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-forest-deep/85 backdrop-blur-md animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-forest-deep/85 backdrop-blur-md animate-fadeIn">
       <div
-        className="relative w-full max-w-2xl bg-ivory rounded-2xl overflow-hidden shadow-2xl border border-sand flex flex-col max-h-[92vh]"
+        className="relative w-full max-w-2xl bg-ivory rounded-2xl overflow-hidden shadow-2xl border border-sand flex flex-col max-h-[94vh] sm:max-h-[92vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="p-6 sm:p-8 bg-forest text-ivory relative border-b border-forest-light/40">
+        <div className="p-5 sm:p-8 bg-forest text-ivory relative border-b border-forest-light/40">
           <button
             onClick={onClose}
             aria-label="Close modal"
-            className="absolute top-5 right-5 w-9 h-9 rounded-full bg-forest-dark/70 hover:bg-forest-light text-ivory flex items-center justify-center transition-all border border-white/20"
+            className="absolute top-4 right-4 sm:top-5 sm:right-5 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-forest-dark/70 hover:bg-forest-light text-ivory flex items-center justify-center transition-all border border-white/20"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
 
-          <span className="text-[11px] uppercase tracking-[0.25em] text-gold font-semibold block mb-2">
+          <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] sm:tracking-[0.25em] text-gold font-semibold block mb-1.5 sm:mb-2">
             Bespoke Travel Concierge
           </span>
-          <h2 className="text-2xl sm:text-3xl font-serif text-white font-medium mb-1">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif text-white font-medium mb-1">
             Plan Your Journey to India
           </h2>
           <p className="text-xs sm:text-sm text-ivory/80 font-light max-w-md">
@@ -87,7 +87,7 @@ export default function TripPlannerModal({ isOpen, onClose, initialPackage = nul
         </div>
 
         {/* Content Body */}
-        <div className="p-6 sm:p-8 overflow-y-auto">
+        <div className="p-4 sm:p-6 md:p-8 overflow-y-auto">
           {submitted ? (
             <div className="py-8 text-center space-y-4">
               <div className="w-16 h-16 rounded-full bg-forest text-gold mx-auto flex items-center justify-center shadow-lg border border-gold/40">

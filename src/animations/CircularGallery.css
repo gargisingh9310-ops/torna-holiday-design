@@ -123,3 +123,24 @@
     perspective: 1000px;
   }
 }
+
+@media (max-width: 480px) {
+  .circular-gallery-wrapper {
+    height: 420px;
+  }
+  .circular-gallery-cylinder {
+    width: 210px;
+    height: 300px;
+  }
+  .circular-gallery-card {
+    width: 200px;
+    height: 290px;
+    border-radius: 14px;
+  }
+  .circular-gallery-viewport {
+    perspective: 800px;
+  }
+  .circular-gallery-info {
+    padding: 1rem 0.85rem;
+  }
+}
